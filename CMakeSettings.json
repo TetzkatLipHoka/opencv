@@ -1,0 +1,396 @@
+﻿{
+  "configurations": [
+    {
+      "name": "x86-Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "-DOPENCV_EXTRA_MODULES_PATH=${projectDir}\\Contrib\\modules",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "msvc_x86" ],
+      "variables": [
+        {
+          "name": "BUILD_SHARED_LIBS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_PERF_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "OPENCV_FFMPEG_ENABLE_LIBAVDEVICE",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_world",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_3d",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_stereo",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_calib",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_apps",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_java",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_java_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_js",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_js_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_python_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_python_tests",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_TBB",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "WITH_TBB",
+          "value": "True",
+          "type": "BOOL"
+        }
+      ]
+    },
+    {
+      "name": "x86-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "-DOPENCV_EXTRA_MODULES_PATH=${projectDir}\\Contrib\\modules",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "msvc_x86" ],
+      "variables": [
+        {
+          "name": "BUILD_SHARED_LIBS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_PERF_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "OPENCV_FFMPEG_ENABLE_LIBAVDEVICE",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_world",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_3d",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_stereo",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_calib",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_apps",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_java",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_java_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_js",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_js_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_python_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_python_tests",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_TBB",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "WITH_TBB",
+          "value": "True",
+          "type": "BOOL"
+        }
+      ]
+    },
+    {
+      "name": "x64-Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "-DOPENCV_EXTRA_MODULES_PATH=${projectDir}\\Contrib\\modules",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "variables": [
+        {
+          "name": "BUILD_SHARED_LIBS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_PERF_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "OPENCV_FFMPEG_ENABLE_LIBAVDEVICE",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_world",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_3d",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_stereo",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_calib",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_apps",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_java",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_java_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_js",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_js_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_python_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_python_tests",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_TBB",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "WITH_TBB",
+          "value": "True",
+          "type": "BOOL"
+        }
+      ]
+    },
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "-DOPENCV_EXTRA_MODULES_PATH=${projectDir}\\Contrib\\modules",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "BUILD_SHARED_LIBS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_PERF_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "OPENCV_FFMPEG_ENABLE_LIBAVDEVICE",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_world",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_3d",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_stereo",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_calib",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_apps",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_java",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_java_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_js",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_js_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_python_bindings_generator",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_opencv_python_tests",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_TBB",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "WITH_TBB",
+          "value": "True",
+          "type": "BOOL"
+        }
+      ]
+    }
+  ]
+}

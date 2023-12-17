@@ -237,6 +237,9 @@ OCV_OPTION(BUILD_ITT                "Build Intel ITT from source"
 )
 OCV_OPTION(BUILD_CLAPACK            "Build CLapack from source"          (((WIN32 OR ANDROID) AND NOT APPLE) OR OPENCV_FORCE_3RDPARTY_BUILD) )
 
+OCV_OPTION(BUILD_LEPTONICA          "Build LEPTONICA from source"        (WIN32 OR ANDROID OR APPLE OR OPENCV_FORCE_3RDPARTY_BUILD) )
+OCV_OPTION(BUILD_TESSERACT          "Build TesserAct from source"        (WIN32 OR ANDROID OR APPLE OR OPENCV_FORCE_3RDPARTY_BUILD) )
+
 # Optional 3rd party components
 # ===================================================
 OCV_OPTION(WITH_1394 "Include IEEE1394 support" ON
@@ -369,7 +372,13 @@ OCV_OPTION(WITH_PTHREADS_PF "Use pthreads-based parallel_for" ON
   VERIFY HAVE_PTHREADS_PF)
 OCV_OPTION(WITH_TIFF "Include TIFF support" ON
   VISIBLE_IF NOT IOS
-  VERIFY HAVE_TIFF)
+  VERIFY HAVE_TIFF) 
+OCV_OPTION(WITH_LEPTONICA "Include LEPTONICA support" ON
+  VISIBLE_IF NOT IOS
+  VERIFY HAVE_LEPTONICA)
+  OCV_OPTION(WITH_TESSERACT "Include TESSERACT support" ON
+  VISIBLE_IF NOT IOS
+  VERIFY HAVE_TESSERACT)  
 OCV_OPTION(WITH_V4L "Include Video 4 Linux support" ON
   VISIBLE_IF UNIX AND NOT ANDROID AND NOT APPLE
   VERIFY HAVE_CAMV4L OR HAVE_CAMV4L2 OR HAVE_VIDEOIO)
@@ -528,7 +537,7 @@ OCV_OPTION(ENABLE_NOISY_WARNINGS      "Show all warnings even if they are too no
 OCV_OPTION(OPENCV_WARNINGS_ARE_ERRORS "Treat warnings as errors"                                 OFF )
 OCV_OPTION(ANDROID_EXAMPLES_WITH_LIBS "Build binaries of Android examples with native libraries" OFF  IF ANDROID )
 OCV_OPTION(ENABLE_IMPL_COLLECTION     "Collect implementation data on function call"             OFF )
-OCV_OPTION(ENABLE_INSTRUMENTATION     "Instrument functions to collect calls trace and performance" OFF )
+OCV_OPTION(ENABLE_INSTRUMENTATION     "InOpenCV_DIRstrument functions to collect calls trace and performance" OFF )
 OCV_OPTION(ENABLE_GNU_STL_DEBUG       "Enable GNU STL Debug mode (defines _GLIBCXX_DEBUG)"       OFF IF CV_GCC )
 OCV_OPTION(ENABLE_BUILD_HARDENING     "Enable hardening of the resulting binaries (against security attacks, detects memory corruption, etc)" OFF)
 OCV_OPTION(ENABLE_LTO                 "Enable Link Time Optimization" OFF IF CV_GCC OR MSVC)
@@ -1452,6 +1461,14 @@ endif()
 
 if(WITH_IMGCODEC_PFM OR DEFINED HAVE_IMGCODEC_PFM)
   status("    PFM:" HAVE_IMGCODEC_PFM THEN "YES" ELSE "NO")
+endif()
+
+if(WITH_LEPTONICA OR HAVE_LEPTONICA)
+  status("    LEPTONICA:" LEPTONICA_FOUND THEN "${LEPTONICA_LIBRARY} (ver ${LEPTONICA_VERSION})" ELSE "build (ver ${LEPTONICA_VERSION})")
+endif()
+
+if(WITH_TESSERACT OR HAVE_TESSERACT)
+  status("    TESSERACT:" TESSERACT_FOUND THEN "${TESSERACT_LIBRARY} (ver ${TESSERACT_VERSION})" ELSE "build (ver ${TESSERACT_VERSION})")
 endif()
 
 # ========================== VIDEO IO ==========================

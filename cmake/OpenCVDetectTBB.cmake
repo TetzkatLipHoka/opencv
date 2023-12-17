@@ -106,10 +106,19 @@ endfunction()
 
 if(BUILD_TBB)
   add_subdirectory("${OpenCV_SOURCE_DIR}/3rdparty/tbb")
+  set(TBB_LIBRARY tbb)
+  set(TBB_INCLUDE_DIR "${${TBB_LIBRARY}_SOURCE_DIR}/include" "${${TBB_LIBRARY}_BINARY_DIR}" CACHE INTERNAL "")
+  set(TBB_VERSION "11.0.0")
+
   if(NOT TARGET tbb)
     return()
   endif()
   set(HAVE_TBB TRUE)
+
+if(NOT BUILD_SHARED_LIBS)
+  ocv_install_target(${TBB_LIBRARY} EXPORT OpenCVModules ARCHIVE DESTINATION ${OPENCV_3P_LIB_INSTALL_PATH} COMPONENT dev)
+endif()
+
 endif()
 
 if(NOT HAVE_TBB)
