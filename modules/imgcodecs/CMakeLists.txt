@@ -51,6 +51,16 @@ if(HAVE_TIFF)
   list(APPEND GRFMT_LIBS ${TIFF_LIBRARIES})
 endif()
 
+if(HAVE_LEPTONICA)
+  ocv_include_directories(${LEPTONICA_INCLUDE_DIR})
+  list(APPEND GRFMT_LIBS ${LEPTONICA_LIBRARIES})
+endif()
+
+if(HAVE_TESSERACT)
+  ocv_include_directories(${TESSERACT_INCLUDE_DIR})
+  list(APPEND GRFMT_LIBS ${TESSERACT_LIBRARIES})
+endif()
+
 if(HAVE_OPENJPEG)
   ocv_include_directories(${OPENJPEG_INCLUDE_DIRS})
   list(APPEND GRFMT_LIBS ${OPENJPEG_LIBRARIES})
